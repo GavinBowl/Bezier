@@ -1,0 +1,24 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "/home/gavin/Bezier/build/_deps/eigen3-build/blas",
+	"dir-cur-src" : "/home/gavin/Bezier/build/_deps/eigen3-src/blas",
+	"dir-top-bld" : "/home/gavin/Bezier/build",
+	"dir-top-src" : "/home/gavin/Bezier",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/home/gavin/Bezier/include",
+		"_deps/eigen3-src"
+	],
+	"language" : "Fortran",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/gavin/Bezier/build/_deps/eigen3-build/blas",
+	"submodule-ext" : ".smod",
+	"submodule-sep" : "@"
+}
