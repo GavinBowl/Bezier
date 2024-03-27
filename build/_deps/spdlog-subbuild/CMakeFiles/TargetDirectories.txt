@@ -1,3 +1,0 @@
-/home/gavin/Bezier/build/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate.dir
-/home/gavin/Bezier/build/_deps/spdlog-subbuild/CMakeFiles/edit_cache.dir
-/home/gavin/Bezier/build/_deps/spdlog-subbuild/CMakeFiles/rebuild_cache.dir
