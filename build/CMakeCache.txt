@@ -239,6 +239,21 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=Bezier
 
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=1.11.0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=11
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
+
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 
@@ -488,11 +503,71 @@ FETCHCONTENT_QUIET:BOOL=ON
 // for Eigen3
 FETCHCONTENT_SOURCE_DIR_EIGEN3:PATH=
 
+//When not empty, overrides where to find pre-populated content
+// for fmt
+FETCHCONTENT_SOURCE_DIR_FMT:PATH=
+
+//When not empty, overrides where to find pre-populated content
+// for spdlog
+FETCHCONTENT_SOURCE_DIR_SPDLOG:PATH=
+
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of Eigen3
 FETCHCONTENT_UPDATES_DISCONNECTED_EIGEN3:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of fmt
+FETCHCONTENT_UPDATES_DISCONNECTED_FMT:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of spdlog
+FETCHCONTENT_UPDATES_DISCONNECTED_SPDLOG:BOOL=OFF
+
+//Value Computed by CMake
+FMT_BINARY_DIR:STATIC=/home/gavin/Bezier/build/_deps/fmt-build
+
+//Generate the cuda-test target.
+FMT_CUDA_TEST:BOOL=OFF
+
+//Debug library postfix.
+FMT_DEBUG_POSTFIX:STRING=d
+
+//Generate the doc target.
+FMT_DOC:BOOL=OFF
+
+//Generate the fuzz target.
+FMT_FUZZ:BOOL=OFF
+
+//Installation directory for include files, a relative path that
+// will be joined with /usr/local or an absolute path.
+FMT_INC_DIR:STRING=include
+
+//Generate the install target.
+FMT_INSTALL:BOOL=OFF
+
+//Value Computed by CMake
+FMT_IS_TOP_LEVEL:STATIC=OFF
+
+//Build a module instead of a traditional library.
+FMT_MODULE:BOOL=OFF
+
+//Include core requiring OS (Windows/Posix) 
+FMT_OS:BOOL=ON
+
+//Enable extra warnings and expensive tests.
+FMT_PEDANTIC:BOOL=OFF
+
+//Value Computed by CMake
+FMT_SOURCE_DIR:STATIC=/home/gavin/Bezier/build/_deps/fmt-src
+
+//Expose headers with marking them as system.
+FMT_SYSTEM_HEADERS:BOOL=OFF
+
+//Generate the test target.
+FMT_TEST:BOOL=OFF
+
+//Halt the compilation with an error on compiler warnings.
+FMT_WERROR:BOOL=OFF
 
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
@@ -537,6 +612,77 @@ QT_QMAKE_EXECUTABLE:FILEPATH=NOTFOUND
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.a
 
+//Build all artifacts
+SPDLOG_BUILD_ALL:BOOL=OFF
+
+//Build benchmarks (Requires https://github.com/google/benchmark.git
+// to be installed)
+SPDLOG_BUILD_BENCH:BOOL=OFF
+
+//Build header only example
+SPDLOG_BUILD_EXAMPLE_HO:BOOL=OFF
+
+//Build position independent code (-fPIC)
+SPDLOG_BUILD_PIC:BOOL=OFF
+
+//Build tests
+SPDLOG_BUILD_TESTS:BOOL=OFF
+
+//Build tests using the header only version
+SPDLOG_BUILD_TESTS_HO:BOOL=OFF
+
+//Enable compiler warnings
+SPDLOG_BUILD_WARNINGS:BOOL=OFF
+
+//Use CLOCK_REALTIME_COARSE instead of the regular clock,
+SPDLOG_CLOCK_COARSE:BOOL=OFF
+
+//Disable default logger creation
+SPDLOG_DISABLE_DEFAULT_LOGGER:BOOL=OFF
+
+//Build static or shared library using precompiled header to speed
+// up compilation time
+SPDLOG_ENABLE_PCH:BOOL=OFF
+
+//Use external fmt header-only library instead of bundled
+SPDLOG_FMT_EXTERNAL_HO:BOOL=OFF
+
+//Generate the install target
+SPDLOG_INSTALL:BOOL=OFF
+
+//prevent spdlog from using of std::atomic log levels (use only
+// if your code never modifies log levels concurrently
+SPDLOG_NO_ATOMIC_LEVELS:BOOL=OFF
+
+//Compile with -fno-exceptions. Call abort() on any spdlog exceptions
+SPDLOG_NO_EXCEPTIONS:BOOL=OFF
+
+//prevent spdlog from querying the thread id on each log call if
+// thread id is not needed
+SPDLOG_NO_THREAD_ID:BOOL=OFF
+
+//prevent spdlog from using thread local storage
+SPDLOG_NO_TLS:BOOL=OFF
+
+//Prevent from child processes to inherit log file descriptors
+SPDLOG_PREVENT_CHILD_FD:BOOL=OFF
+
+//Enable address sanitizer in tests
+SPDLOG_SANITIZE_ADDRESS:BOOL=OFF
+
+//run clang-tidy
+SPDLOG_TIDY:BOOL=OFF
+
+//Use std::format instead of fmt library. No compile-time format
+// string checking.
+SPDLOG_USE_STD_FORMAT:BOOL=OFF
+
+//non supported option
+SPDLOG_WCHAR_FILENAMES:BOOL=OFF
+
+//non supported option
+SPDLOG_WCHAR_SUPPORT:BOOL=OFF
+
 //Path to a file.
 SUPERLU_INCLUDES:PATH=SUPERLU_INCLUDES-NOTFOUND
 
@@ -551,6 +697,18 @@ UMFPACK_LIBRARIES:FILEPATH=UMFPACK_LIBRARIES-NOTFOUND
 
 //Dependencies for the target
 eigen_lapack_LIB_DEPENDS:STATIC=general;eigen_blas;
+
+//The directory containing a CMake configuration file for fmt.
+fmt_DIR:PATH=fmt_DIR-NOTFOUND
+
+//Value Computed by CMake
+spdlog_BINARY_DIR:STATIC=/home/gavin/Bezier/build/_deps/spdlog-build
+
+//Value Computed by CMake
+spdlog_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+spdlog_SOURCE_DIR:STATIC=/home/gavin/Bezier/build/_deps/spdlog-src
 
 
 ########################
@@ -709,7 +867,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -822,14 +980,22 @@ CPM_DRY_RUN:INTERNAL=OFF
 CPM_FILE:INTERNAL=/home/gavin/Bezier/cmake/CPM.cmake
 CPM_INDENT:INTERNAL=CPM:
 CPM_MODULE_PATH:INTERNAL=/home/gavin/Bezier/build/CPM_modules
-CPM_PACKAGES:INTERNAL=Eigen3
+CPM_PACKAGES:INTERNAL=Eigen3;fmt;spdlog
 CPM_PACKAGE_Eigen3_BINARY_DIR:INTERNAL=/home/gavin/Bezier/build/_deps/eigen3-build
 CPM_PACKAGE_Eigen3_SOURCE_DIR:INTERNAL=/home/gavin/Bezier/build/_deps/eigen3-src
 CPM_PACKAGE_Eigen3_VERSION:INTERNAL=3.4.0
 CPM_PACKAGE_LOCK_FILE:INTERNAL=/home/gavin/Bezier/build/cpm-package-lock.cmake
+CPM_PACKAGE_fmt_BINARY_DIR:INTERNAL=/home/gavin/Bezier/build/_deps/fmt-build
+CPM_PACKAGE_fmt_SOURCE_DIR:INTERNAL=/home/gavin/Bezier/build/_deps/fmt-src
+CPM_PACKAGE_fmt_VERSION:INTERNAL=9.1.0
+CPM_PACKAGE_spdlog_BINARY_DIR:INTERNAL=/home/gavin/Bezier/build/_deps/spdlog-build
+CPM_PACKAGE_spdlog_SOURCE_DIR:INTERNAL=/home/gavin/Bezier/build/_deps/spdlog-src
+CPM_PACKAGE_spdlog_VERSION:INTERNAL=1.11.0
 CPM_VERSION:INTERNAL=0.38.0
 //Test EIGEN_COMPILER_SUPPORT_CPP11
 EIGEN_COMPILER_SUPPORT_CPP11:INTERNAL=1
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: KLU_INCLUDES
@@ -856,6 +1022,10 @@ UMFPACK_LIBRARIES-ADVANCED:INTERNAL=1
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Test has_std_0x_flag
+has_std_0x_flag:INTERNAL=1
+//Test has_std_11_flag
+has_std_11_flag:INTERNAL=1
 //Test standard_math_library_linked_to_automatically
 standard_math_library_linked_to_automatically:INTERNAL=1
 

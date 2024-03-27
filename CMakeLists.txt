@@ -12,4 +12,4 @@ include(cmake/depend.cmake)
 
 add_executable(Bezier main.cpp src/utils.cpp)
 
-target_link_libraries(Bezier PUBLIC Eigen3::Eigen)
+target_link_libraries(Bezier PUBLIC Eigen3::Eigen spdlog::spdlog)

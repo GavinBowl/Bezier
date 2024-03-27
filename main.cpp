@@ -1,6 +1,6 @@
 #include <vector>
-#include <iostream>
 #include <Eigen/Dense>
+#include <spdlog/spdlog.h>
 
 #include "utils.hpp"
 #include "curve.hpp"
@@ -19,12 +19,12 @@ int main() {
     std::vector<Eigen::Vector2d> coordinates = Utils::flattenCurve(curve,segmentCount);
     Eigen::Vector2d res1 = coordinates[1];
     
-    std::cout << "res1: " << "(" << res1.x() << ", " << res1.y() << ")" << std::endl;
+    SPDLOG_INFO("res1: ({}, {})",res1.x(),res1.y());
 
     // compute by geometry relationship
     double t = 1.0 / segmentCount;
     Eigen::Vector2d res2;
     res2 = Utils::deCasteljau(controlPoint,t);
     
-    std::cout << "res2: " << "(" << res2.x() << ", " << res2.y() << ")" << std::endl;
+    SPDLOG_INFO("res2: ({}, {})",res2.x(),res2.y());
 }

@@ -70,3 +70,17 @@
 /home/gavin/Bezier/build/_deps/eigen3-build/bench/spbench/CMakeFiles/install.dir
 /home/gavin/Bezier/build/_deps/eigen3-build/bench/spbench/CMakeFiles/install/local.dir
 /home/gavin/Bezier/build/_deps/eigen3-build/bench/spbench/CMakeFiles/install/strip.dir
+/home/gavin/Bezier/build/_deps/fmt-build/CMakeFiles/fmt.dir
+/home/gavin/Bezier/build/_deps/fmt-build/CMakeFiles/edit_cache.dir
+/home/gavin/Bezier/build/_deps/fmt-build/CMakeFiles/rebuild_cache.dir
+/home/gavin/Bezier/build/_deps/fmt-build/CMakeFiles/list_install_components.dir
+/home/gavin/Bezier/build/_deps/fmt-build/CMakeFiles/install.dir
+/home/gavin/Bezier/build/_deps/fmt-build/CMakeFiles/install/local.dir
+/home/gavin/Bezier/build/_deps/fmt-build/CMakeFiles/install/strip.dir
+/home/gavin/Bezier/build/_deps/spdlog-build/CMakeFiles/spdlog.dir
+/home/gavin/Bezier/build/_deps/spdlog-build/CMakeFiles/edit_cache.dir
+/home/gavin/Bezier/build/_deps/spdlog-build/CMakeFiles/rebuild_cache.dir
+/home/gavin/Bezier/build/_deps/spdlog-build/CMakeFiles/list_install_components.dir
+/home/gavin/Bezier/build/_deps/spdlog-build/CMakeFiles/install.dir
+/home/gavin/Bezier/build/_deps/spdlog-build/CMakeFiles/install/local.dir
+/home/gavin/Bezier/build/_deps/spdlog-build/CMakeFiles/install/strip.dir
