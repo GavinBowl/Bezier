@@ -19,7 +19,12 @@ namespace Utils {
 Eigen::Vector2d deCasteljau(const std::vector<Eigen::Vector2d>& points,double t);
 
 
-
+/**
+ * @brief sampling and connect
+ * @param curve Bezier Curve
+ * @param segmentCount number of sampling
+ * @return vector of sample points
+ */
 std::vector<Eigen::Vector2d> flattenCurve(Curve::Curve3 curve,int segmentCount);
 
 

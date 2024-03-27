@@ -27,8 +27,7 @@ public:
 };
 
 class Curve3 {
-// private:
-public:
+private:
     std::vector<Eigen::Vector2d> controlPoint;
     struct Bezier::Bezier3 X = {};
     struct Bezier::Bezier3 Y = {};

@@ -1,17 +1,19 @@
-#include <iostream>
 #include <Eigen/Dense>
+#include <spdlog/spdlog.h>
+
 #include "utils.hpp"
+
 
 namespace Utils {
 
 
 Eigen::Vector2d deCasteljau(const std::vector<Eigen::Vector2d>& points,double t) {
-    std::cout << "[in deCasteljau]" << std::endl;
-
-    for (const auto& p:points) {
-        std::cout << p.x() << "," << p.y() << " ";
+    SPDLOG_INFO("[in deCasteljau]");
+    std::string point_string;
+    for (const auto& p : points) {
+        point_string += fmt::format("({}, {}) ", p.x(), p.y());
     }
-    std::cout << std::endl;
+    SPDLOG_INFO("{}", point_string);
 
     if (points.size()==1) {
         return points[0];
@@ -23,7 +25,7 @@ Eigen::Vector2d deCasteljau(const std::vector<Eigen::Vector2d>& points,double t)
         double y = (1-t) * points[i].y() + t * points[i+1].y();
         newPoints[i] = Eigen::Vector2d(x,y);
     }
-    deCasteljau(newPoints,t);
+    return deCasteljau(newPoints,t);
 }
 
 // TODO: be a member function of Curve

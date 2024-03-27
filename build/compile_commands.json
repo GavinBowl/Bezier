@@ -1,13 +1,13 @@
 [
 {
   "directory": "/home/gavin/Bezier/build",
-  "command": "/usr/bin/g++ -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/eigen3-src -g -std=gnu++11 -o CMakeFiles/Bezier.dir/main.cpp.o -c /home/gavin/Bezier/main.cpp",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/eigen3-src -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include -g -std=gnu++11 -o CMakeFiles/Bezier.dir/main.cpp.o -c /home/gavin/Bezier/main.cpp",
   "file": "/home/gavin/Bezier/main.cpp",
   "output": "CMakeFiles/Bezier.dir/main.cpp.o"
 },
 {
   "directory": "/home/gavin/Bezier/build",
-  "command": "/usr/bin/g++ -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/eigen3-src -g -std=gnu++11 -o CMakeFiles/Bezier.dir/src/utils.cpp.o -c /home/gavin/Bezier/src/utils.cpp",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/eigen3-src -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include -g -std=gnu++11 -o CMakeFiles/Bezier.dir/src/utils.cpp.o -c /home/gavin/Bezier/src/utils.cpp",
   "file": "/home/gavin/Bezier/src/utils.cpp",
   "output": "CMakeFiles/Bezier.dir/src/utils.cpp.o"
 },
@@ -844,5 +844,53 @@
   "command": "/usr/bin/g++ -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/eigen3-src  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wenum-conversion -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -g -std=gnu++11 -o _deps/eigen3-build/bench/spbench/CMakeFiles/test_sparseLU.dir/test_sparseLU.cpp.o -c /home/gavin/Bezier/build/_deps/eigen3-src/bench/spbench/test_sparseLU.cpp",
   "file": "/home/gavin/Bezier/build/_deps/eigen3-src/bench/spbench/test_sparseLU.cpp",
   "output": "_deps/eigen3-build/bench/spbench/CMakeFiles/test_sparseLU.dir/test_sparseLU.cpp.o"
+},
+{
+  "directory": "/home/gavin/Bezier/build",
+  "command": "/usr/bin/g++ -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/fmt-src/include -g -std=gnu++11 -o _deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.o -c /home/gavin/Bezier/build/_deps/fmt-src/src/format.cc",
+  "file": "/home/gavin/Bezier/build/_deps/fmt-src/src/format.cc",
+  "output": "_deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.o"
+},
+{
+  "directory": "/home/gavin/Bezier/build",
+  "command": "/usr/bin/g++ -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/fmt-src/include -g -std=gnu++11 -o _deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.o -c /home/gavin/Bezier/build/_deps/fmt-src/src/os.cc",
+  "file": "/home/gavin/Bezier/build/_deps/fmt-src/src/os.cc",
+  "output": "_deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.o"
+},
+{
+  "directory": "/home/gavin/Bezier/build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include -g -std=c++11 -o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/spdlog.cpp.o -c /home/gavin/Bezier/build/_deps/spdlog-src/src/spdlog.cpp",
+  "file": "/home/gavin/Bezier/build/_deps/spdlog-src/src/spdlog.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/spdlog.cpp.o"
+},
+{
+  "directory": "/home/gavin/Bezier/build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include -g -std=c++11 -o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o -c /home/gavin/Bezier/build/_deps/spdlog-src/src/stdout_sinks.cpp",
+  "file": "/home/gavin/Bezier/build/_deps/spdlog-src/src/stdout_sinks.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o"
+},
+{
+  "directory": "/home/gavin/Bezier/build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include -g -std=c++11 -o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o -c /home/gavin/Bezier/build/_deps/spdlog-src/src/color_sinks.cpp",
+  "file": "/home/gavin/Bezier/build/_deps/spdlog-src/src/color_sinks.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o"
+},
+{
+  "directory": "/home/gavin/Bezier/build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include -g -std=c++11 -o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o -c /home/gavin/Bezier/build/_deps/spdlog-src/src/file_sinks.cpp",
+  "file": "/home/gavin/Bezier/build/_deps/spdlog-src/src/file_sinks.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o"
+},
+{
+  "directory": "/home/gavin/Bezier/build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include -g -std=c++11 -o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/async.cpp.o -c /home/gavin/Bezier/build/_deps/spdlog-src/src/async.cpp",
+  "file": "/home/gavin/Bezier/build/_deps/spdlog-src/src/async.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/async.cpp.o"
+},
+{
+  "directory": "/home/gavin/Bezier/build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include -g -std=c++11 -o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/cfg.cpp.o -c /home/gavin/Bezier/build/_deps/spdlog-src/src/cfg.cpp",
+  "file": "/home/gavin/Bezier/build/_deps/spdlog-src/src/cfg.cpp",
+  "output": "_deps/spdlog-build/CMakeFiles/spdlog.dir/src/cfg.cpp.o"
 }
 ]

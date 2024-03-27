@@ -47,19 +47,21 @@ cmake_ninja_workdir = /home/gavin/Bezier/build/
 #############################################
 # Order-only phony target for Bezier
 
-build cmake_object_order_depends_target_Bezier: phony || .
+build cmake_object_order_depends_target_Bezier: phony || cmake_object_order_depends_target_fmt cmake_object_order_depends_target_spdlog
 
 build CMakeFiles/Bezier.dir/main.cpp.o: CXX_COMPILER__Bezier_unscanned_Debug /home/gavin/Bezier/main.cpp || cmake_object_order_depends_target_Bezier
+  DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
   DEP_FILE = CMakeFiles/Bezier.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++11
-  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/eigen3-src
+  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/eigen3-src -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include
   OBJECT_DIR = CMakeFiles/Bezier.dir
   OBJECT_FILE_DIR = CMakeFiles/Bezier.dir
 
 build CMakeFiles/Bezier.dir/src/utils.cpp.o: CXX_COMPILER__Bezier_unscanned_Debug /home/gavin/Bezier/src/utils.cpp || cmake_object_order_depends_target_Bezier
+  DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
   DEP_FILE = CMakeFiles/Bezier.dir/src/utils.cpp.o.d
   FLAGS = -g -std=gnu++11
-  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/eigen3-src
+  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/eigen3-src -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include
   OBJECT_DIR = CMakeFiles/Bezier.dir
   OBJECT_FILE_DIR = CMakeFiles/Bezier.dir/src
 
@@ -71,8 +73,9 @@ build CMakeFiles/Bezier.dir/src/utils.cpp.o: CXX_COMPILER__Bezier_unscanned_Debu
 #############################################
 # Link the executable Bezier
 
-build Bezier: CXX_EXECUTABLE_LINKER__Bezier_Debug CMakeFiles/Bezier.dir/main.cpp.o CMakeFiles/Bezier.dir/src/utils.cpp.o
+build Bezier: CXX_EXECUTABLE_LINKER__Bezier_Debug CMakeFiles/Bezier.dir/main.cpp.o CMakeFiles/Bezier.dir/src/utils.cpp.o | _deps/spdlog-build/libspdlogd.a _deps/fmt-build/libfmtd.a || _deps/fmt-build/libfmtd.a _deps/spdlog-build/libspdlogd.a
   FLAGS = -g
+  LINK_LIBRARIES = _deps/spdlog-build/libspdlogd.a  _deps/fmt-build/libfmtd.a
   OBJECT_DIR = CMakeFiles/Bezier.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -2595,6 +2598,260 @@ build _deps/eigen3-build/bench/spbench/CMakeFiles/install/strip.util: CUSTOM_COM
 build _deps/eigen3-build/bench/spbench/install/strip: phony _deps/eigen3-build/bench/spbench/CMakeFiles/install/strip.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/gavin/Bezier/cmake/depend.cmake
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target fmt
+
+
+#############################################
+# Order-only phony target for fmt
+
+build cmake_object_order_depends_target_fmt: phony || .
+
+build _deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.o: CXX_COMPILER__fmt_unscanned_Debug /home/gavin/Bezier/build/_deps/fmt-src/src/format.cc || cmake_object_order_depends_target_fmt
+  DEP_FILE = _deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.o.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/fmt-src/include
+  OBJECT_DIR = _deps/fmt-build/CMakeFiles/fmt.dir
+  OBJECT_FILE_DIR = _deps/fmt-build/CMakeFiles/fmt.dir/src
+
+build _deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.o: CXX_COMPILER__fmt_unscanned_Debug /home/gavin/Bezier/build/_deps/fmt-src/src/os.cc || cmake_object_order_depends_target_fmt
+  DEP_FILE = _deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.o.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/fmt-src/include
+  OBJECT_DIR = _deps/fmt-build/CMakeFiles/fmt.dir
+  OBJECT_FILE_DIR = _deps/fmt-build/CMakeFiles/fmt.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target fmt
+
+
+#############################################
+# Link the static library _deps/fmt-build/libfmtd.a
+
+build _deps/fmt-build/libfmtd.a: CXX_STATIC_LIBRARY_LINKER__fmt_Debug _deps/fmt-build/CMakeFiles/fmt.dir/src/format.cc.o _deps/fmt-build/CMakeFiles/fmt.dir/src/os.cc.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/fmt-build/CMakeFiles/fmt.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = _deps/fmt-build/libfmtd.a
+  TARGET_PDB = fmtd.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/fmt-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/gavin/Bezier/build/_deps/fmt-build && /usr/local/bin/ccmake -S/home/gavin/Bezier -B/home/gavin/Bezier/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/fmt-build/edit_cache: phony _deps/fmt-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/fmt-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/gavin/Bezier/build/_deps/fmt-build && /usr/local/bin/cmake --regenerate-during-build -S/home/gavin/Bezier -B/home/gavin/Bezier/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/fmt-build/rebuild_cache: phony _deps/fmt-build/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/fmt-build/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/fmt-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/fmt-build/all
+  COMMAND = cd /home/gavin/Bezier/build/_deps/fmt-build && /usr/local/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/fmt-build/install: phony _deps/fmt-build/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/fmt-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/fmt-build/all
+  COMMAND = cd /home/gavin/Bezier/build/_deps/fmt-build && /usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/fmt-build/install/local: phony _deps/fmt-build/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/fmt-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/fmt-build/all
+  COMMAND = cd /home/gavin/Bezier/build/_deps/fmt-build && /usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/fmt-build/install/strip: phony _deps/fmt-build/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/gavin/Bezier/cmake/depend.cmake
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target spdlog
+
+
+#############################################
+# Order-only phony target for spdlog
+
+build cmake_object_order_depends_target_spdlog: phony || cmake_object_order_depends_target_fmt
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/spdlog.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /home/gavin/Bezier/build/_deps/spdlog-src/src/spdlog.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/spdlog.cpp.o.d
+  FLAGS = -g -std=c++11
+  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /home/gavin/Bezier/build/_deps/spdlog-src/src/stdout_sinks.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o.d
+  FLAGS = -g -std=c++11
+  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /home/gavin/Bezier/build/_deps/spdlog-src/src/color_sinks.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o.d
+  FLAGS = -g -std=c++11
+  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /home/gavin/Bezier/build/_deps/spdlog-src/src/file_sinks.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o.d
+  FLAGS = -g -std=c++11
+  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/async.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /home/gavin/Bezier/build/_deps/spdlog-src/src/async.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/async.cpp.o.d
+  FLAGS = -g -std=c++11
+  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/cfg.cpp.o: CXX_COMPILER__spdlog_unscanned_Debug /home/gavin/Bezier/build/_deps/spdlog-src/src/cfg.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/cfg.cpp.o.d
+  FLAGS = -g -std=c++11
+  INCLUDES = -I/home/gavin/Bezier/include -I/home/gavin/Bezier/build/_deps/spdlog-src/include -I/home/gavin/Bezier/build/_deps/fmt-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target spdlog
+
+
+#############################################
+# Link the static library _deps/spdlog-build/libspdlogd.a
+
+build _deps/spdlog-build/libspdlogd.a: CXX_STATIC_LIBRARY_LINKER__spdlog_Debug _deps/spdlog-build/CMakeFiles/spdlog.dir/src/spdlog.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/async.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/cfg.cpp.o || _deps/fmt-build/libfmtd.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = _deps/spdlog-build/libspdlogd.a
+  TARGET_PDB = spdlogd.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/spdlog-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/gavin/Bezier/build/_deps/spdlog-build && /usr/local/bin/ccmake -S/home/gavin/Bezier -B/home/gavin/Bezier/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/spdlog-build/edit_cache: phony _deps/spdlog-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/spdlog-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/gavin/Bezier/build/_deps/spdlog-build && /usr/local/bin/cmake --regenerate-during-build -S/home/gavin/Bezier -B/home/gavin/Bezier/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/spdlog-build/rebuild_cache: phony _deps/spdlog-build/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/spdlog-build/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/spdlog-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/spdlog-build/all
+  COMMAND = cd /home/gavin/Bezier/build/_deps/spdlog-build && /usr/local/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/spdlog-build/install: phony _deps/spdlog-build/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/spdlog-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/spdlog-build/all
+  COMMAND = cd /home/gavin/Bezier/build/_deps/spdlog-build && /usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/spdlog-build/install/local: phony _deps/spdlog-build/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/spdlog-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/spdlog-build/all
+  COMMAND = cd /home/gavin/Bezier/build/_deps/spdlog-build && /usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/spdlog-build/install/strip: phony _deps/spdlog-build/CMakeFiles/install/strip.util
+
+# =============================================================================
 # Target aliases.
 
 build blas: phony _deps/eigen3-build/blas/blas
@@ -2609,6 +2866,8 @@ build eigen_lapack: phony _deps/eigen3-build/lapack/libeigen_lapack.so
 
 build eigen_lapack_static: phony _deps/eigen3-build/lapack/libeigen_lapack_static.a
 
+build fmt: phony _deps/fmt-build/libfmtd.a
+
 build lapack: phony _deps/eigen3-build/lapack/lapack
 
 build libeigen_blas.so: phony _deps/eigen3-build/blas/libeigen_blas.so
@@ -2619,7 +2878,13 @@ build libeigen_lapack.so: phony _deps/eigen3-build/lapack/libeigen_lapack.so
 
 build libeigen_lapack_static.a: phony _deps/eigen3-build/lapack/libeigen_lapack_static.a
 
+build libfmtd.a: phony _deps/fmt-build/libfmtd.a
+
+build libspdlogd.a: phony _deps/spdlog-build/libspdlogd.a
+
 build spbenchsolver: phony _deps/eigen3-build/bench/spbench/spbenchsolver
+
+build spdlog: phony _deps/spdlog-build/libspdlogd.a
 
 build spsolver: phony _deps/eigen3-build/bench/spbench/spsolver
 
@@ -2635,7 +2900,7 @@ build uninstall: phony _deps/eigen3-build/uninstall
 #############################################
 # Folder: /home/gavin/Bezier/build
 
-build all: phony Bezier _deps/eigen3-build/all
+build all: phony Bezier _deps/eigen3-build/all _deps/fmt-build/all _deps/spdlog-build/all
 
 # =============================================================================
 
@@ -2701,20 +2966,34 @@ build _deps/eigen3-build/unsupported/Eigen/all: phony _deps/eigen3-build/unsuppo
 build _deps/eigen3-build/unsupported/Eigen/CXX11/all: phony
 
 # =============================================================================
+
+#############################################
+# Folder: /home/gavin/Bezier/build/_deps/fmt-build
+
+build _deps/fmt-build/all: phony _deps/fmt-build/libfmtd.a
+
+# =============================================================================
+
+#############################################
+# Folder: /home/gavin/Bezier/build/_deps/spdlog-build
+
+build _deps/spdlog-build/all: phony _deps/spdlog-build/libspdlogd.a
+
+# =============================================================================
 # Built-in targets
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/gavin/Bezier/CMakeLists.txt /home/gavin/Bezier/cmake/CPM.cmake /home/gavin/Bezier/cmake/depend.cmake /usr/local/share/cmake-3.29/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/local/share/cmake-3.29/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.29/Modules/CMakeDependentOption.cmake /usr/local/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake /usr/local/share/cmake-3.29/Modules/CMakeFortranInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake /usr/local/share/cmake-3.29/Modules/CMakePushCheckState.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXSymbolExists.cmake /usr/local/share/cmake-3.29/Modules/CheckIncludeFile.cmake /usr/local/share/cmake-3.29/Modules/CheckLanguage.cmake /usr/local/share/cmake-3.29/Modules/CheckLibraryExists.cmake /usr/local/share/cmake-3.29/Modules/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckStructHasMember.cmake /usr/local/share/cmake-3.29/Modules/CheckSymbolExists.cmake /usr/local/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-Fortran.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.29/Modules/ExternalProject/shared_internal_commands.cmake /usr/local/share/cmake-3.29/Modules/FetchContent.cmake /usr/local/share/cmake-3.29/Modules/FetchContent/CMakeLists.cmake.in /usr/local/share/cmake-3.29/Modules/FindGit.cmake /usr/local/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.29/Modules/FindPackageMessage.cmake /usr/local/share/cmake-3.29/Modules/FindPkgConfig.cmake /usr/local/share/cmake-3.29/Modules/FindQt4.cmake /usr/local/share/cmake-3.29/Modules/FindThreads.cmake /usr/local/share/cmake-3.29/Modules/GNUInstallDirs.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckFlagCommonConfig.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/MacroAddFileDependencies.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-Fortran.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux.cmake /usr/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake /usr/local/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.29.0/CMakeCCompiler.cmake CMakeFiles/3.29.0/CMakeCXXCompiler.cmake CMakeFiles/3.29.0/CMakeFortranCompiler.cmake CMakeFiles/3.29.0/CMakeSystem.cmake _deps/eigen3-src/CMakeLists.txt _deps/eigen3-src/bench/spbench/CMakeLists.txt _deps/eigen3-src/blas/CMakeLists.txt _deps/eigen3-src/cmake/Eigen3Config.cmake.in _deps/eigen3-src/cmake/FindCHOLMOD.cmake _deps/eigen3-src/cmake/FindHWLOC.cmake _deps/eigen3-src/cmake/FindKLU.cmake _deps/eigen3-src/cmake/FindPASTIX.cmake _deps/eigen3-src/cmake/FindStandardMathLibrary.cmake _deps/eigen3-src/cmake/FindSuperLU.cmake _deps/eigen3-src/cmake/FindUMFPACK.cmake _deps/eigen3-src/demos/CMakeLists.txt _deps/eigen3-src/lapack/CMakeLists.txt _deps/eigen3-src/scripts/CMakeLists.txt _deps/eigen3-src/scripts/buildtests.in _deps/eigen3-src/scripts/cdashtesting.cmake.in _deps/eigen3-src/scripts/check.in _deps/eigen3-src/scripts/debug.in _deps/eigen3-src/scripts/release.in _deps/eigen3-src/unsupported/CMakeLists.txt _deps/eigen3-src/unsupported/Eigen/CMakeLists.txt _deps/eigen3-src/unsupported/Eigen/CXX11/CMakeLists.txt
+build build.ninja: RERUN_CMAKE | /home/gavin/Bezier/CMakeLists.txt /home/gavin/Bezier/cmake/CPM.cmake /home/gavin/Bezier/cmake/depend.cmake /usr/local/share/cmake-3.29/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/local/share/cmake-3.29/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.29/Modules/CMakeDependentOption.cmake /usr/local/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake /usr/local/share/cmake-3.29/Modules/CMakeFortranInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake /usr/local/share/cmake-3.29/Modules/CMakeParseArguments.cmake /usr/local/share/cmake-3.29/Modules/CMakePushCheckState.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXSymbolExists.cmake /usr/local/share/cmake-3.29/Modules/CheckIncludeFile.cmake /usr/local/share/cmake-3.29/Modules/CheckLanguage.cmake /usr/local/share/cmake-3.29/Modules/CheckLibraryExists.cmake /usr/local/share/cmake-3.29/Modules/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckStructHasMember.cmake /usr/local/share/cmake-3.29/Modules/CheckSymbolExists.cmake /usr/local/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-Fortran.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.29/Modules/ExternalProject/shared_internal_commands.cmake /usr/local/share/cmake-3.29/Modules/FetchContent.cmake /usr/local/share/cmake-3.29/Modules/FetchContent/CMakeLists.cmake.in /usr/local/share/cmake-3.29/Modules/FindGit.cmake /usr/local/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.29/Modules/FindPackageMessage.cmake /usr/local/share/cmake-3.29/Modules/FindPkgConfig.cmake /usr/local/share/cmake-3.29/Modules/FindQt4.cmake /usr/local/share/cmake-3.29/Modules/FindThreads.cmake /usr/local/share/cmake-3.29/Modules/GNUInstallDirs.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckFlagCommonConfig.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/MacroAddFileDependencies.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-Fortran.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux.cmake /usr/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake /usr/local/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.29.0/CMakeCCompiler.cmake CMakeFiles/3.29.0/CMakeCXXCompiler.cmake CMakeFiles/3.29.0/CMakeFortranCompiler.cmake CMakeFiles/3.29.0/CMakeSystem.cmake _deps/eigen3-src/CMakeLists.txt _deps/eigen3-src/bench/spbench/CMakeLists.txt _deps/eigen3-src/blas/CMakeLists.txt _deps/eigen3-src/cmake/Eigen3Config.cmake.in _deps/eigen3-src/cmake/FindCHOLMOD.cmake _deps/eigen3-src/cmake/FindHWLOC.cmake _deps/eigen3-src/cmake/FindKLU.cmake _deps/eigen3-src/cmake/FindPASTIX.cmake _deps/eigen3-src/cmake/FindStandardMathLibrary.cmake _deps/eigen3-src/cmake/FindSuperLU.cmake _deps/eigen3-src/cmake/FindUMFPACK.cmake _deps/eigen3-src/demos/CMakeLists.txt _deps/eigen3-src/lapack/CMakeLists.txt _deps/eigen3-src/scripts/CMakeLists.txt _deps/eigen3-src/scripts/buildtests.in _deps/eigen3-src/scripts/cdashtesting.cmake.in _deps/eigen3-src/scripts/check.in _deps/eigen3-src/scripts/debug.in _deps/eigen3-src/scripts/release.in _deps/eigen3-src/unsupported/CMakeLists.txt _deps/eigen3-src/unsupported/Eigen/CMakeLists.txt _deps/eigen3-src/unsupported/Eigen/CXX11/CMakeLists.txt _deps/fmt-src/CMakeLists.txt _deps/fmt-src/support/cmake/JoinPaths.cmake _deps/fmt-src/support/cmake/cxx14.cmake _deps/spdlog-src/CMakeLists.txt _deps/spdlog-src/cmake/ide.cmake _deps/spdlog-src/cmake/utils.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/gavin/Bezier/CMakeLists.txt /home/gavin/Bezier/cmake/CPM.cmake /home/gavin/Bezier/cmake/depend.cmake /usr/local/share/cmake-3.29/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/local/share/cmake-3.29/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.29/Modules/CMakeDependentOption.cmake /usr/local/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake /usr/local/share/cmake-3.29/Modules/CMakeFortranInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake /usr/local/share/cmake-3.29/Modules/CMakePushCheckState.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXSymbolExists.cmake /usr/local/share/cmake-3.29/Modules/CheckIncludeFile.cmake /usr/local/share/cmake-3.29/Modules/CheckLanguage.cmake /usr/local/share/cmake-3.29/Modules/CheckLibraryExists.cmake /usr/local/share/cmake-3.29/Modules/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckStructHasMember.cmake /usr/local/share/cmake-3.29/Modules/CheckSymbolExists.cmake /usr/local/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-Fortran.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.29/Modules/ExternalProject/shared_internal_commands.cmake /usr/local/share/cmake-3.29/Modules/FetchContent.cmake /usr/local/share/cmake-3.29/Modules/FetchContent/CMakeLists.cmake.in /usr/local/share/cmake-3.29/Modules/FindGit.cmake /usr/local/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.29/Modules/FindPackageMessage.cmake /usr/local/share/cmake-3.29/Modules/FindPkgConfig.cmake /usr/local/share/cmake-3.29/Modules/FindQt4.cmake /usr/local/share/cmake-3.29/Modules/FindThreads.cmake /usr/local/share/cmake-3.29/Modules/GNUInstallDirs.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckFlagCommonConfig.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/MacroAddFileDependencies.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-Fortran.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux.cmake /usr/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake /usr/local/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.29.0/CMakeCCompiler.cmake CMakeFiles/3.29.0/CMakeCXXCompiler.cmake CMakeFiles/3.29.0/CMakeFortranCompiler.cmake CMakeFiles/3.29.0/CMakeSystem.cmake _deps/eigen3-src/CMakeLists.txt _deps/eigen3-src/bench/spbench/CMakeLists.txt _deps/eigen3-src/blas/CMakeLists.txt _deps/eigen3-src/cmake/Eigen3Config.cmake.in _deps/eigen3-src/cmake/FindCHOLMOD.cmake _deps/eigen3-src/cmake/FindHWLOC.cmake _deps/eigen3-src/cmake/FindKLU.cmake _deps/eigen3-src/cmake/FindPASTIX.cmake _deps/eigen3-src/cmake/FindStandardMathLibrary.cmake _deps/eigen3-src/cmake/FindSuperLU.cmake _deps/eigen3-src/cmake/FindUMFPACK.cmake _deps/eigen3-src/demos/CMakeLists.txt _deps/eigen3-src/lapack/CMakeLists.txt _deps/eigen3-src/scripts/CMakeLists.txt _deps/eigen3-src/scripts/buildtests.in _deps/eigen3-src/scripts/cdashtesting.cmake.in _deps/eigen3-src/scripts/check.in _deps/eigen3-src/scripts/debug.in _deps/eigen3-src/scripts/release.in _deps/eigen3-src/unsupported/CMakeLists.txt _deps/eigen3-src/unsupported/Eigen/CMakeLists.txt _deps/eigen3-src/unsupported/Eigen/CXX11/CMakeLists.txt: phony
+build /home/gavin/Bezier/CMakeLists.txt /home/gavin/Bezier/cmake/CPM.cmake /home/gavin/Bezier/cmake/depend.cmake /usr/local/share/cmake-3.29/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /usr/local/share/cmake-3.29/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/local/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.29/Modules/CMakeDependentOption.cmake /usr/local/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake /usr/local/share/cmake-3.29/Modules/CMakeFortranInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake /usr/local/share/cmake-3.29/Modules/CMakeParseArguments.cmake /usr/local/share/cmake-3.29/Modules/CMakePushCheckState.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckCXXSymbolExists.cmake /usr/local/share/cmake-3.29/Modules/CheckIncludeFile.cmake /usr/local/share/cmake-3.29/Modules/CheckLanguage.cmake /usr/local/share/cmake-3.29/Modules/CheckLibraryExists.cmake /usr/local/share/cmake-3.29/Modules/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckStructHasMember.cmake /usr/local/share/cmake-3.29/Modules/CheckSymbolExists.cmake /usr/local/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-Fortran.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.29/Modules/ExternalProject/shared_internal_commands.cmake /usr/local/share/cmake-3.29/Modules/FetchContent.cmake /usr/local/share/cmake-3.29/Modules/FetchContent/CMakeLists.cmake.in /usr/local/share/cmake-3.29/Modules/FindGit.cmake /usr/local/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.29/Modules/FindPackageMessage.cmake /usr/local/share/cmake-3.29/Modules/FindPkgConfig.cmake /usr/local/share/cmake-3.29/Modules/FindQt4.cmake /usr/local/share/cmake-3.29/Modules/FindThreads.cmake /usr/local/share/cmake-3.29/Modules/GNUInstallDirs.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckFlagCommonConfig.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/MacroAddFileDependencies.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-Fortran.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux.cmake /usr/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake /usr/local/share/cmake-3.29/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.29.0/CMakeCCompiler.cmake CMakeFiles/3.29.0/CMakeCXXCompiler.cmake CMakeFiles/3.29.0/CMakeFortranCompiler.cmake CMakeFiles/3.29.0/CMakeSystem.cmake _deps/eigen3-src/CMakeLists.txt _deps/eigen3-src/bench/spbench/CMakeLists.txt _deps/eigen3-src/blas/CMakeLists.txt _deps/eigen3-src/cmake/Eigen3Config.cmake.in _deps/eigen3-src/cmake/FindCHOLMOD.cmake _deps/eigen3-src/cmake/FindHWLOC.cmake _deps/eigen3-src/cmake/FindKLU.cmake _deps/eigen3-src/cmake/FindPASTIX.cmake _deps/eigen3-src/cmake/FindStandardMathLibrary.cmake _deps/eigen3-src/cmake/FindSuperLU.cmake _deps/eigen3-src/cmake/FindUMFPACK.cmake _deps/eigen3-src/demos/CMakeLists.txt _deps/eigen3-src/lapack/CMakeLists.txt _deps/eigen3-src/scripts/CMakeLists.txt _deps/eigen3-src/scripts/buildtests.in _deps/eigen3-src/scripts/cdashtesting.cmake.in _deps/eigen3-src/scripts/check.in _deps/eigen3-src/scripts/debug.in _deps/eigen3-src/scripts/release.in _deps/eigen3-src/unsupported/CMakeLists.txt _deps/eigen3-src/unsupported/Eigen/CMakeLists.txt _deps/eigen3-src/unsupported/Eigen/CXX11/CMakeLists.txt _deps/fmt-src/CMakeLists.txt _deps/fmt-src/support/cmake/JoinPaths.cmake _deps/fmt-src/support/cmake/cxx14.cmake _deps/spdlog-src/CMakeLists.txt _deps/spdlog-src/cmake/ide.cmake _deps/spdlog-src/cmake/utils.cmake: phony
 
 
 #############################################

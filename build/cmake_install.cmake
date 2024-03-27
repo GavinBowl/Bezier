@@ -45,6 +45,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/gavin/Bezier/build/_deps/eigen3-build/cmake_install.cmake")
+  include("/home/gavin/Bezier/build/_deps/fmt-build/cmake_install.cmake")
+  include("/home/gavin/Bezier/build/_deps/spdlog-build/cmake_install.cmake")
 
 endif()
 

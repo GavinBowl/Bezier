@@ -2338,3 +2338,381 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-8I0DjT"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-8I0DjT"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/_deps/eigen3-src/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-8I0DjT'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_de3de
+        [1/2] /usr/bin/g++ -DCOMPILER_SUPPORT_std=cpp03  -std=c++03 -o CMakeFiles/cmTC_de3de.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-8I0DjT/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_de3de.dir/src.cxx.o -o cmTC_de3de   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-U9gCUS"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-U9gCUS"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/_deps/eigen3-src/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-U9gCUS'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_24d68
+        [1/2] /usr/bin/g++ -DCOMPILER_SUPPORT_std=cpp03  -std=c++03 -o CMakeFiles/cmTC_24d68.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-U9gCUS/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_24d68.dir/src.cxx.o -o cmTC_24d68   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-nrmFXk"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-nrmFXk"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/_deps/eigen3-src/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-nrmFXk'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_70078
+        [1/2] /usr/bin/g++ -DCOMPILER_SUPPORT_std=cpp03  -std=c++03 -o CMakeFiles/cmTC_70078.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-nrmFXk/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_70078.dir/src.cxx.o -o cmTC_70078   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-cxqkpL"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-cxqkpL"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/_deps/eigen3-src/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-cxqkpL'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_89c32
+        [1/2] /usr/bin/g++ -DCOMPILER_SUPPORT_std=cpp03  -std=c++03 -o CMakeFiles/cmTC_89c32.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-cxqkpL/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_89c32.dir/src.cxx.o -o cmTC_89c32   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-gwDvr8"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-gwDvr8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/_deps/eigen3-src/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-gwDvr8'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_e295f
+        [1/2] /usr/bin/g++ -DCOMPILER_SUPPORT_std=cpp03  -std=c++03 -o CMakeFiles/cmTC_e295f.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-gwDvr8/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_e295f.dir/src.cxx.o -o cmTC_e295f   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-xzBlTb"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-xzBlTb"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/_deps/eigen3-src/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-xzBlTb'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_2f7f2
+        [1/2] /usr/bin/g++ -DCOMPILER_SUPPORT_std=cpp03  -std=c++03 -o CMakeFiles/cmTC_2f7f2.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-xzBlTb/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_2f7f2.dir/src.cxx.o -o cmTC_2f7f2   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-qZur3s"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-qZur3s"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/_deps/eigen3-src/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-qZur3s'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_d749e
+        [1/2] /usr/bin/g++ -DCOMPILER_SUPPORT_std=cpp03  -std=c++03 -o CMakeFiles/cmTC_d749e.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-qZur3s/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_d749e.dir/src.cxx.o -o cmTC_d749e   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-1V1pPb"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-1V1pPb"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/_deps/eigen3-src/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-1V1pPb'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_e732e
+        [1/2] /usr/bin/g++ -DCOMPILER_SUPPORT_std=cpp03  -std=c++03 -o CMakeFiles/cmTC_e732e.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-1V1pPb/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_e732e.dir/src.cxx.o -o cmTC_e732e   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/fmt-src/support/cmake/cxx14.cmake:6 (check_cxx_compiler_flag)"
+      - "build/_deps/fmt-src/support/cmake/cxx14.cmake:46 (fmt_check_cxx_compiler_flag)"
+      - "build/_deps/fmt-src/CMakeLists.txt:127 (include)"
+    checks:
+      - "Performing Test has_std_11_flag"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-3IgfVP"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-3IgfVP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/CPM_modules;/home/gavin/Bezier/build/_deps/fmt-src/support/cmake"
+    buildResult:
+      variable: "has_std_11_flag"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-3IgfVP'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_cd278
+        [1/2] /usr/bin/g++ -Dhas_std_11_flag  -std=c++11 -o CMakeFiles/cmTC_cd278.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-3IgfVP/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_cd278.dir/src.cxx.o -o cmTC_cd278   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/fmt-src/support/cmake/cxx14.cmake:6 (check_cxx_compiler_flag)"
+      - "build/_deps/fmt-src/support/cmake/cxx14.cmake:47 (fmt_check_cxx_compiler_flag)"
+      - "build/_deps/fmt-src/CMakeLists.txt:127 (include)"
+    checks:
+      - "Performing Test has_std_0x_flag"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-hCcXp5"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-hCcXp5"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/CPM_modules;/home/gavin/Bezier/build/_deps/fmt-src/support/cmake"
+    buildResult:
+      variable: "has_std_0x_flag"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-hCcXp5'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_f34e6
+        [1/2] /usr/bin/g++ -Dhas_std_0x_flag  -std=c++0x -o CMakeFiles/cmTC_f34e6.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-hCcXp5/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_f34e6.dir/src.cxx.o -o cmTC_f34e6   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-pylWoI"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-pylWoI"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/_deps/eigen3-src/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-pylWoI'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_78a7f
+        [1/2] /usr/bin/g++ -DCOMPILER_SUPPORT_std=cpp03  -std=c++03 -o CMakeFiles/cmTC_78a7f.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-pylWoI/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_78a7f.dir/src.cxx.o -o cmTC_78a7f   && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/local/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen3-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-3cAe6E"
+      binary: "/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-3cAe6E"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/gavin/Bezier/build/_deps/eigen3-src/cmake"
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-3cAe6E'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_c4182
+        [1/2] /usr/bin/g++ -DCOMPILER_SUPPORT_std=cpp03  -std=c++03 -o CMakeFiles/cmTC_c4182.dir/src.cxx.o -c /home/gavin/Bezier/build/CMakeFiles/CMakeScratch/TryCompile-3cAe6E/src.cxx
+        [2/2] : && /usr/bin/g++   CMakeFiles/cmTC_c4182.dir/src.cxx.o -o cmTC_c4182   && :
+        
+      exitCode: 0
+...
